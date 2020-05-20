@@ -22,8 +22,10 @@ setuptools.setup(
     ],
     keywords="Jenkins logs tools",
     project_urls={ "Source": "https://github.com/bertold/download-jenkins-build-log"},
-    python_requires=">=3",
-    install_requires=['requests'],
+    python_requires=">=3.6",
+    install_requires=['requests>=2.23.0',
+                      'click>=6',
+                      'attrs>=19.3.0',],
     entry_points = {
         'console_scripts': ['download-jenkins-build-log=DownloadJenkinsBuildLog.downloader:main'],
     }
